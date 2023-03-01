@@ -9,7 +9,7 @@ export default function ListaPokemon() {
      * [1] => es el estado que se va actualizando
     */
 
-    const [pokemones, setPokemones] = useState([]);
+    const [pokemones, setPokemones] = useState([]); //nombre, url
 
     /** creando metodo para obtener la api pokemon 
      * trabajando con una funcion asincrona porque nos estamos conectando a una api de otro servidor
@@ -36,7 +36,7 @@ export default function ListaPokemon() {
 
     console.log(pokemones); //llamando al estado para verificar si contiene los pokemones
     return (
-        <div>
+        <div className='container'>
             <h1>Lista Pokemones</h1>
             <div className='row'>
                 {
@@ -44,7 +44,12 @@ export default function ListaPokemon() {
                         /**
                          * Enviando la informacion del estado a otro componente mediante las props
                          */
-                        return <Tarjeta key={indice} {...personajes}/>
+                        return (
+                            <div className='col-md-4'>
+                                <Tarjeta key={indice} {...personajes}/>
+                            </div>
+                            
+                        )
                     })
                 }
             </div>
