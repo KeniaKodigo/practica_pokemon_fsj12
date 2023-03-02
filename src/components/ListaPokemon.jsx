@@ -37,7 +37,7 @@ export default function ListaPokemon() {
     console.log(pokemones); //llamando al estado para verificar si contiene los pokemones
     return (
         <div className='container'>
-            <h1>Lista Pokemones</h1>
+            <h1 className='text-center fst-italic'>Lista Pokemones</h1>
             <div className='row'>
                 {
                     pokemones.map((personajes, indice) => {
@@ -45,7 +45,7 @@ export default function ListaPokemon() {
                          * Enviando la informacion del estado a otro componente mediante las props
                          */
                         return (
-                            <div className='col-md-4'>
+                            <div className='col-md-4 mt-4'>
                                 <Tarjeta key={indice} {...personajes}/>
                             </div>
                             

@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import ListaPokemon from './ListaPokemon'
 import Formulario from './Formulario'
+import ListPokemones from './lista_axios/ListPokemones'
 
 /** pasando por parametro las props */
 export default function Navbar(props) {
@@ -18,7 +19,7 @@ export default function Navbar(props) {
      */
     return (
         <BrowserRouter>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     {/* pasando la prop name en el menu */}
                     <a className="navbar-brand" href="#">Bienvenido, {props.name}</a>
@@ -31,8 +32,17 @@ export default function Navbar(props) {
                          * Componente <Link/> Hace referencia a las rutas que creamos
                          * propiedad to => asignamos el nombre del a ruta (path)
                          */}
-                        <Link to="/">Home</Link>
-                        <Link to="/formulario">Formulario</Link>
+                        <ul className='navbar-nav'> 
+                            <li className='nav-item'>
+                                <Link to="/" className='nav-link'>Home</Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to="/formulario" className='nav-link'>Formulario</Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to="/lista2" className='nav-link'>Pokemones</Link>
+                            </li>
+                        </ul>
                     </div>
                     </div>
                 </div>
@@ -44,6 +54,7 @@ export default function Navbar(props) {
                 */}
                 <Route path='/' element={<ListaPokemon />}/>
                 <Route path='/formulario' element={<Formulario />}/>
+                <Route path='/lista2' element={<ListPokemones />} />
             </Routes>
         </BrowserRouter>
     )

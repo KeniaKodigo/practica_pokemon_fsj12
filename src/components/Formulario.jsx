@@ -33,6 +33,7 @@ export default function Formulario() {
     console.log(pokemon);
     return (
         <div className='container'>
+            <h1 className='text-center fst-italic'>Encuentra a tu Pokemon</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="">Ingresa el nombre del pokemon</label>
                 <input type="text" placeholder='Ingresa Pokemon' className='form-control' onChange={handleName}/><br></br>
