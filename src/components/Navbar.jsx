@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import ListaPokemon from './ListaPokemon'
 import Formulario from './Formulario'
 import ListPokemones from './lista_axios/ListPokemones'
+import Logout from './Logout'
 
 /** pasando por parametro las props */
 export default function Navbar(props) {
@@ -42,11 +43,15 @@ export default function Navbar(props) {
                             <li className='nav-item'>
                                 <Link to="/lista2" className='nav-link'>Pokemones</Link>
                             </li>
+                            <li className='nav-item'>
+                                <Logout />
+                            </li>
                         </ul>
                     </div>
                     </div>
                 </div>
             </nav>
+            
             <Routes>
                 {/** asignando las rutas Home y formulario 
                  * path => nombre de la ruta que va ser referencia al link del nav

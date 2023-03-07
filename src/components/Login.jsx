@@ -5,6 +5,6 @@ export default function Login() {
     const { loginWithRedirect } = useAuth0();
     
     return (
-        <button onClick={() => loginWithRedirect()}>Iniciar Sesion</button>
+        <button className="btn btn-primary" onClick={() => loginWithRedirect()}>Iniciar Sesion</button>
     )
 }
