@@ -4,6 +4,7 @@ import ListaPokemon from './ListaPokemon'
 import Formulario from './Formulario'
 import ListPokemones from './lista_axios/ListPokemones'
 import Logout from './Logout'
+import Perfil from './Perfil'
 
 /** pasando por parametro las props */
 export default function Navbar(props) {
@@ -44,6 +45,9 @@ export default function Navbar(props) {
                                 <Link to="/lista2" className='nav-link'>Pokemones</Link>
                             </li>
                             <li className='nav-item'>
+                                <Link to="/perfil" className='nav-link'>Perfil del Usuario</Link>
+                            </li>
+                            <li className='nav-item'>
                                 <Logout />
                             </li>
                         </ul>
@@ -60,6 +64,7 @@ export default function Navbar(props) {
                 <Route path='/' element={<ListaPokemon />}/>
                 <Route path='/formulario' element={<Formulario />}/>
                 <Route path='/lista2' element={<ListPokemones />} />
+                <Route path='/perfil' element={<Perfil />} />
             </Routes>
         </BrowserRouter>
     )
