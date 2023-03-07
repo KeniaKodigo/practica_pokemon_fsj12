@@ -26,6 +26,7 @@ export default function ListPokemones() {
         })
     }
 
+
     /** montando el metodo obtenerPokemones2() */
     useEffect(() => {
         obtenerPokemones2();

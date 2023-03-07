@@ -15,11 +15,13 @@ export default function ListaPokemon() {
      * trabajando con una funcion asincrona porque nos estamos conectando a una api de otro servidor
     */
     const obtenerPokemones = async () => {
-        let respuesta = await fetch('https://pokeapi.co/api/v2/pokemon/');
-        let datos = await respuesta.json();
-        //console.log(datos.results); //results es el atributo donde esta el arreglo de los pokemones
-        /** actualizando el estado con la informacion del api */
-        setPokemones(datos.results);
+            let respuesta = await fetch('https://pokeapi.co/api/v2/pokemon/');
+            let datos = await respuesta.json();
+            //console.log(datos.results); //results es el atributo donde esta el arreglo de los pokemones
+            /** actualizando el estado con la informacion del api */
+            setPokemones(datos.results);
+        
+        
 
     }
 
